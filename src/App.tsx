@@ -3,10 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { HomePage } from './components/HomePage/HomePage';
 import { PeoplePage } from './components/PeoplePage/PeoplePage';
 import { Navigation } from './components/Navigation/Navigation';
-
-export const PageNotFound = () => {
-  return <h1 className="title">Page not found</h1>;
-};
+import { PageNotFound } from './components/PageNotFound/PageNotFound';
 
 export const App = () => (
   <div data-cy="app">
