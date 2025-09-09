@@ -22,7 +22,6 @@ export const Navigation = () => {
           >
             Home
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               classNames('navbar-item', {

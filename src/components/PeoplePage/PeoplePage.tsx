@@ -12,11 +12,11 @@ export const PeoplePage = () => {
   const [firstLoad, setFirstLoad] = useState(false);
 
   useEffect(() => {
+    if (firstLoad) return;
     const loadPeoples = async () => {
       try {
         setIsLoading(true);
         const peopleList = await getPeople();
-
         setPeoples(peopleList);
       } catch (e) {
         setError(true);
@@ -28,9 +28,9 @@ export const PeoplePage = () => {
     };
 
     loadPeoples();
-  }, []);
+  }, [firstLoad]);
 
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams<{ slug?: string }>();
 
   return (
     <div className="block">
